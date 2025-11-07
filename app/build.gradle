@@ -9,8 +9,8 @@ android {
         namespace "com.tuya.smart.bizubundle.demo"
         minSdkVersion 23
         targetSdkVersion 35
-        versionCode 1
-        versionName "1.0"
+        versionCode 1001005
+        versionName "1.1.5"
         multiDexEnabled true
 
         Properties properties = new Properties()
@@ -58,7 +58,23 @@ android {
         pickFirst 'lib/*/libsqlcipher.so'
     }
 
+    signingConfigs {
+        release {
+            keyAlias 'TRX'
+            keyPassword 'h@bit@p658065trx'
+            storeFile file('../trx.jks')
+            storePassword 'h@bit@p658065trx'
+            enableV1Signing false
+            enableV2Signing true
+            enableV3Signing true
+        }
+    }
+
     buildTypes {
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'

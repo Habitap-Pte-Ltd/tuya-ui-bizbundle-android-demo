@@ -7,7 +7,7 @@ buildscript {
         sdk_version = '6.7.9'
         ipc_sdk_version = '6.7.2'
         biz_bom_version = "6.7.25"
-        applicationId = "com.sample.sdk"
+        applicationId = "com.habitap.residential.trx"
     }
     repositories {
         mavenLocal()

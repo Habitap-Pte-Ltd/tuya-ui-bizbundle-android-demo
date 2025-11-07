@@ -118,7 +118,8 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
      */
     private void addScene() {
         if (null != iThingSceneBusinessService && mServiceByInterface.getCurrentHomeId() != 0) {
-            iThingSceneBusinessService.addSceneBean(this, mServiceByInterface.getCurrentHomeId(), ADD_SCENE_REQUEST_CODE);
+            //iThingSceneBusinessService.addSceneBean(this, mServiceByInterface.getCurrentHomeId(), ADD_SCENE_REQUEST_CODE);
+            iThingSceneBusinessService.addBizSceneBean(this, mServiceByInterface.getCurrentHomeId(), ADD_SCENE_REQUEST_CODE);
         }
     }
 
